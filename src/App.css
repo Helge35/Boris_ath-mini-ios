@@ -36,3 +36,27 @@
     transform: rotate(360deg);
   }
 }
+
+#header,#footer,#content { position:absolute; right:0;left:0; background:#CCC}
+
+#header{
+   height:100px; top:0;
+   background-size:cover;
+   width: 100%;
+   height: 100px;
+
+
+}
+#footer{
+  height:50px; bottom:0;
+  background-color: #89AAC6;
+  opacity: 0.8;
+}
+#content{
+  top:100px;
+  bottom:50px;
+  background:#DBEAF9;
+  background-size:cover;
+}
+
+
