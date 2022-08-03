@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import { useParams } from "react-router";
 import styled from "@emotion/styled";
 import Grid from "@mui/material/Grid";
+import Button from "@mui/material/Button";
+import { Link } from "react-router-dom";
+import './Pages.style.css';
 
 export const FfcPage = () => {
   const { id } = useParams();
@@ -30,29 +33,43 @@ export const FfcPage = () => {
       </LayoutDiv>
       {selectedDivID === 1 ? (
         <ButtonsDiv>
-          <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }} >
+          <Grid container  rowSpacing={4} columnSpacing={0.5}>
             <Grid item xs={4}>
-             1
+              <Button variant="contained"  color="primary"    className="inner-btn" component={Link}  to={"/ffc/2"} >
+                1
+              </Button>
             </Grid>
             <Grid item xs={4}>
-             2
+            <Button variant="contained"  color="primary"    className="inner-btn" component={Link}  to={"/ffc/2"} >
+                2
+              </Button>
             </Grid>
             <Grid item xs={4}>
-              3
+            <Button variant="contained"  color="primary"    className="inner-btn" component={Link}  to={"/ffc/2"} >
+                3
+              </Button>
             </Grid>
 
             <Grid item xs={4}>
-             5
+            <Button variant="contained"  color="primary"    className="inner-btn" component={Link}  to={"/ffc/2"} >
+                4
+              </Button>
             </Grid>
             <Grid item xs={4}>
-             6
+            <Button variant="contained"  color="primary"    className="inner-btn" component={Link}  to={"/ffc/2"} >
+                5
+              </Button>
             </Grid>
             <Grid item xs={4}>
-              7
+            <Button variant="contained"  color="primary"    className="inner-btn" component={Link}  to={"/ffc/2"} >
+                6
+              </Button>
             </Grid>
           </Grid>
         </ButtonsDiv>
-      ) : <></>}
+      ) : (
+        <></>
+      )}
       {selectedDivID === 2 ? <ButtonsDiv>2</ButtonsDiv> : <></>}
       {selectedDivID === 3 ? <ButtonsDiv>3</ButtonsDiv> : <></>}
       <LayoutDiv>
@@ -63,11 +80,9 @@ export const FfcPage = () => {
 };
 
 const ButtonsDiv = styled.div`
-  float: left;
-  min-width: 200px;
-  min-height: 200px;
-  background-color: grey;
-  margin-left: 50px;
+float: left;
+min-width: 600px;
+min-height: 200px;
 `;
 
 const LayoutDiv = styled.div`

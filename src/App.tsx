@@ -7,13 +7,12 @@ import { FfcPage } from "./pages/Ffc.page";
 function App() {
   return (
     <div className="App">
-      <div id="header" style={{ backgroundImage: `url("header.png")` }}>
+      <div id="header">
       </div>
-      <div id="content" style={{ backgroundImage: `url("bg.jpeg")` }}>
+      <div id="content" >
         <Routes>
           <Route path="/" element={<StartupPage />} />
           <Route path="/ffc/:id" element={<FfcPage />} />        
-        {/*   <Route path="/Maintenance" element={<Maintenance />} />         */}
         </Routes>
       </div>
       <div id="footer"></div>
